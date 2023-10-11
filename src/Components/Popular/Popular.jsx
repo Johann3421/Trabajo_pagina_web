@@ -68,7 +68,7 @@ const Popular = () => {
           {
             Data.map(({id,imgSrc,destTitle,location,grade})=>{
               return(
-                <div className="singleDestination">
+                <div className="singleDestination" key={id}>
                   <div className="destImage">
 
                     <img src={imgSrc} alt="Image title" />
