@@ -12,12 +12,13 @@
 }
 
 .offer {
-  padding-top: 15rem;
+  padding-top: 15px;
 }
 .offer .secContainer .mainContent {
   gap: 1rem;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .offer .secContainer .singleOffer {
   border-radius: 1rem;

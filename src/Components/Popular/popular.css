@@ -14,6 +14,10 @@
 .popular {
   padding-top: 15rem;
 }
+.popular .secContainer {
+  flex-direction: column;
+  align-items: center;
+}
 .popular .secContainer .secHeader {
   flex-direction: column;
   align-items: flex-start;

@@ -3,6 +3,39 @@ import './blog.css'
 
 import {BsArrowRightShort} from 'react-icons/bs'
 
+import img from '../../Assets/image(2).jpg'
+import img2 from '../../Assets/image(3).jpg'
+import img3 from '../../Assets/image(9).jpg'
+import img4 from '../../Assets/image(10).jpg'
+
+const Posts = [
+    {
+      id: 1,
+      postImage: img,
+      title: 'Lorem, ipsum dolor.',
+      desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta veniam exercitationem est commodi tempore.',
+    },
+    {
+      id: 2,
+      postImage: img2,
+      title: 'Lorem, ipsum dolor.',
+      desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta veniam exercitationem est commodi tempore.',
+    },
+    {
+      id: 3,
+      postImage: img3,
+      title: 'Lorem, ipsum dolor.',
+      desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta veniam exercitationem est commodi tempore.',
+    },
+    {
+      id: 4,
+      postImage: img4,
+      title: 'Lorem, ipsum dolor.',
+      desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta veniam exercitationem est commodi tempore.',
+    },
+]
+
+
 const Blog = () => {
   return (
     <section className='blog container section'>
@@ -18,27 +51,32 @@ const Blog = () => {
         </div>
 
         <div className="mainContainer grid">
-          <div className="singlePost grid">
-            <div className="imgDiv">
-              <img src="" alt="Image Name" />
-            </div>
+          {
+            Posts.map(({ id, postImage, title, desc }) => {
+              return (
+                <div className="singlePost" key={id}>
+                  <div className="imgDiv">
+                    <img src={postImage} alt={title} />
+                  </div>
 
-            <div className="postDetails">
-              <h3>
-                Title
-              </h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, accusantium.</p>
-            </div>
+                  <div className="postDetails">
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
+                  </div>
 
-            <a href="#" className='flex'>
-              <BsArrowRightShort className="icon"/>
-              Saber Mas
-            </a>
-          </div>
+                  <a href="#" className='flex'>
+                    <BsArrowRightShort className="icon" />
+                    Saber Mas
+                  </a>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </section>
   )
 }
+
 
 export default Blog
